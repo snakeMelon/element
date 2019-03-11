@@ -1,0 +1,314 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(muse-time-picker) {
+  width: 280px;
+
+  $--muse-timepicker-clock-background-color:#d3dce6;
+  &.mu-picker-landspace {
+    width: 479px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    &.mu-picker-landspace .mu-picker-display {
+      width: 165px;
+      height: auto;
+      padding-top: 16px;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 2px;
+      position: relative;
+    }
+  }
+  .mu-picker-display {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    background-color: $--color-primary;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    .mu-picker-landspace & {
+      width: 165px;
+      height: auto;
+      padding-top: 16px;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 2px;
+      position: relative;
+    }
+  }
+
+  .mu-time-display {
+    align-items: center;
+    background-color: $--color-primary;
+  }
+
+  .mu-time-display-text {
+    /*color: @alternateTextColor;*/
+    color:$--color-white;
+    margin: 6px 0px;
+    line-height: 58px;
+    height: 58px;
+    font-size: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .mu-picker-landspace & {
+      margin: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 48px;
+    }
+  }
+
+  .mu-time-display-affix {
+    flex: 1 1;
+    position: relative;
+    line-height: 17px;
+    height: 17px;
+    font-size: 17px;
+    .mu-picker-landspace & {
+      flex: none;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .mu-time-display-time {
+    margin: 0px 10px;
+    .mu-picker-landspace & {
+      margin-top: -28px;
+    }
+  }
+
+  .mu-time-display-clickable {
+    cursor: pointer;
+    &.inactive,
+    + span {
+      opacity: 0.7
+    }
+    .mu-picker-landspace & {
+      margin-top: 8px;
+    }
+  }
+
+  .mu-time-display-affix-top {
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    .mu-picker-landspace & {
+      position: static;
+      order: -1;
+    }
+  }
+
+  .mu-picker-container {
+    padding-bottom: 8px;
+    flex: 1;
+  }
+
+  .mu-timepicker-clock {
+    height: 282px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .mu-timepicker-circle {
+    position: absolute;
+    top: 12px;
+    width: 260px;
+    height: 260px;
+    border-radius: 100%;
+    /* background-color: fade(@darkBlack, 7%);*/
+    background-color:transparentize($--color-black, 0.93);
+    left: 50%;
+    margin-left: -130px;
+    .mu-picker-landspace & {
+      left: 50%;
+      margin-left: -130px;
+    }
+  }
+
+  .mu-timepicker-hours {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    position: relative;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+
+  .mu-timepicker-hours-mask {
+    height: 100%;
+    width: 100%;
+    pointer-events: auto;
+  }
+  .mu-timepicker-minutes {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    position: relative;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+
+  .mu-timepicker-minutes-mask {
+    height: 100%;
+    width: 100%;
+    pointer-events: auto;
+  }
+
+  .mu-timepicker-number {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    pointer-events: none;
+    border-radius: 100%;
+    box-sizing: border-box;
+    transform: translate(0px, 5px);
+    user-select: none;
+    color:$--musetimepicker-color;
+    /* color: @textColor;*/
+  }
+  .mu-timepicker-number__inner {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+  .mu-timepicker-number__selected {
+    /* background-color: @primaryColor;
+     color: @alternateTextColor;*/
+    background-color: $--color-primary;
+    color:$--color-white;
+  }
+
+  .mu-timepicker-pointer {
+    height: 40%;
+    /*background-color: currentColor;*/
+    background-color: $--color-primary;
+    width: 2px;
+    left: calc(50% - 1px);
+    position: absolute;
+    bottom: 50%;
+    transform-origin: center bottom 0px;
+    pointer-events: none;
+    &.inner {
+      height: 30%;
+    }
+  }
+
+  .mu-timepicker-pointer-mark {
+    box-sizing: content-box;
+    /* background-color: @alternateTextColor;*/
+     background-color: $--color-primary;
+    border: 4px solid $--color-primary;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: -5px;
+    left: -6px;
+    border-radius: 100%;
+    &.has-selected {
+      display: none;
+    }
+  }
+
+  .mu-timepicker-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 272px;
+    overflow: hidden;
+  }
+
+  .mu-timepicker-list-hours {
+    border-right: 1px solid $--color-info;
+  }
+  .mu-timepicker-list-hours,
+  .mu-timepicker-list-minutes {
+    width: 50%;
+    flex-shrink: 0;
+    height: inherit;
+    line-height: 35px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    &:hover::-webkit-scrollbar {
+      display: block;
+    }
+    &::-webkit-scrollbar {
+      width: 2px;
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      background: #E3E3E3;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #C1C1C1;
+      border-radius: 2px;
+    }
+  }
+
+  .mu-timepicker-hour-button,
+  .mu-timepicker-minute-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    margin: 0px auto;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: inherit;
+    text-align: center;
+    line-height: inherit;
+    /* color: @textColor;*/
+    color:$--color-text-placeholder;
+    border: none;
+    text-align: center;
+    height: 40px;
+    &:hover {
+      /* background-color: fade(@textColor, 10%);*/
+      background-color:transparentize($--color-text-placeholder,0.9);
+    }
+    &.is-active {
+      color: $--color-primary;
+      font-size: 26px;
+    }
+  }
+
+  .mu-picker-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0px;
+    max-height: 48px;
+    padding: 0px;
+    .mu-flat-button {
+      min-width: 64px;
+      margin: 4px 8px 0px 0px;
+    }
+  }
+}

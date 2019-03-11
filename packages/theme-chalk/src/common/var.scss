@@ -697,6 +697,22 @@ $--datepicker-active-color: $--color-primary !default;
 $--datepicker-text-hover-color: $--color-primary !default;
 $--datepicker-cell-hover-color: #fff !default;
 
+
+/* TimePickerClock-muse
+-------------------------*/
+$--musetimepicker-color: $--color-text-regular !default;
+$--musetimepicker-off-color: $--color-text-placeholder !default;
+$--musetimepicker-header-color: $--color-text-regular !default;
+$--musetimepicker-icon-color: $--color-text-primary !default;
+$--musetimepicker-border-color: $--disabled-border-base !default;
+$--musetimepicker-inner-border-color: #e4e4e4 !default;
+$--musetimepicker-inrange-color: $--border-color-extra-light !default;
+$--musetimepicker-inrange-hover-color: $--border-color-extra-light !default;
+$--musetimepicker-active-color: $--color-primary !default;
+$--musetimepicker-text-hover-color: $--color-primary !default;
+$--musetimepicker-cell-hover-color: #fff !default;
+
+
 /* Loading
 --------------------------*/
 $--loading-spinner-size: 42px !default;

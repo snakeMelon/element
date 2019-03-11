@@ -71,6 +71,8 @@ import Main from '../packages/main/index.js';
 import Footer from '../packages/footer/index.js';
 import Timeline from '../packages/timeline/index.js';
 import TimelineItem from '../packages/timeline-item/index.js';
+import MuseTimePicker from '../packages/muse-time-picker/index.js';
+import MuseDatePicker from '../packages/muse-date-picker/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
@@ -142,6 +144,8 @@ const components = [
   Footer,
   Timeline,
   TimelineItem,
+  MuseTimePicker,
+  MuseDatePicker,
   CollapseTransition
 ];
 
@@ -251,5 +255,7 @@ export default {
   Main,
   Footer,
   Timeline,
-  TimelineItem
+  TimelineItem,
+  MuseTimePicker,
+  MuseDatePicker
 };

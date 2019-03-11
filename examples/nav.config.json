@@ -251,6 +251,14 @@
             {
               "path": "/timeline",
               "title": "Timeline 时间线"
+            },
+            {
+              "path": "/muse-time-picker",
+              "title": "MuseTimePicker 时间选择器"
+            },
+            {
+              "path": "/muse-date-picker",
+              "title": "MuseDatePicker 日期选择器"
             }
           ]
         }
@@ -509,6 +517,14 @@
             {
               "path": "/timeline",
               "title": "Timeline"
+            },
+            {
+              "path": "/muse-time-picker",
+              "title": "MuseTimePicker"
+            },
+            {
+              "path": "/muse-date-picker",
+              "title": "MuseDatePicker"
             }
           ]
         }
@@ -767,6 +783,14 @@
             {
               "path": "/timeline",
               "title": "Timeline"
+            },
+            {
+              "path": "/muse-time-picker",
+              "title": "MuseTimePicker"
+            },
+            {
+              "path": "/muse-date-picker",
+              "title": "MuseDatePicker"
             }
           ]
         }
@@ -1025,6 +1049,14 @@
             {
               "path": "/timeline",
               "title": "Timeline"
+            },
+            {
+              "path": "/muse-time-picker",
+              "title": "MuseTimePicker"
+            },
+            {
+              "path": "/muse-date-picker",
+              "title": "MuseDatePicker"
             }
           ]
         }
